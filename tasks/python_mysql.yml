@@ -1,0 +1,9 @@
+- name: Install python-mysqldb requirement
+  apt:
+    name: python-mysqldb
+  when: ansible_python_version is version_compare('3.0.0', '<')
+
+- name: Install python3-mysqldb requirement
+  apt:
+    name: python3-mysqldb
+  when: ansible_python_version is version_compare('3.0.0', '>=')

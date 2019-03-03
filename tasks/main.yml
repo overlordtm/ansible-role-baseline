@@ -1,0 +1,6 @@
+---
+- name: Set timezone to UTC
+  timezone:
+    name: UTC
+
+- import_tasks: python_mysql.yml
